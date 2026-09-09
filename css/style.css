@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+:root{
+    --altura-cabeçalho:50px;
+    --largura-barra-lateral:200px;
+}
+header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+    height: var(--altura-cabeçalho);
+    width:100%;
+    background-color: #FFF;
+}
+.logo {
+    position: absolute;
+    left: 60px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 25px;
+}
+.user{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: calc(var(--altura-cabeçalho) / 4);
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 25px;
+}
+.main{
+    position: absolute;
+    top: var(--altura-cabeçalho);
+    z-index: 1;
+    left: var(--largura-barra-lateral);
+    height: calc(100% - var(--altura-cabeçalho));
+    width: calc(100% - var(--largura-barra-lateral));
+    background-color: #FFF;
+}
