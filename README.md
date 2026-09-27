@@ -66,8 +66,8 @@ https://www.figma.com/proto/Pm6vIiTXwlg0qWdBBvSzLd/Untitled?node-id=1-38&t=O2qyz
 
 As principais tecnologias utilizadas no desenvolvimento do projeto são:
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 
 ---
 
