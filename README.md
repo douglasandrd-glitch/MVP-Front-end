@@ -8,7 +8,7 @@ Integrantes
 
 - Vitória Ferreira da Conceição 
 - Bruno Soares Da Silva
-- [NOME DO INTEGRANTE 3]
+- Rafael Xavier De Oliveira
 - klara Vitória da Silva Cruz 
 - Douglas Rodrigues Andrade das Neves 
 ---
