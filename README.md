@@ -7,7 +7,7 @@ Nome da equipe: Núcleo 6
 Integrantes
 
 - Vitória Ferreira da Conceição 
-- [NOME DO INTEGRANTE 2]
+- Bruno Soares Da Silva
 - [NOME DO INTEGRANTE 3]
 - [NOME DO INTEGRANTE 4]
 - [NOME DO INTEGRANTE 5]
