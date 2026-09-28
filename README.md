@@ -9,9 +9,8 @@ Integrantes
 - Vitória Ferreira da Conceição 
 - Bruno Soares Da Silva
 - [NOME DO INTEGRANTE 3]
-- [NOME DO INTEGRANTE 4]
-- [NOME DO INTEGRANTE 5]
-
+- klara Vitória da Silva Cruz 
+- Douglas Rodrigues Andrade das Neves 
 ---
 
 🎯 Situação-problema
