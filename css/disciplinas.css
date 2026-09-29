@@ -1,0 +1,115 @@
+.disciplinas-conteudo {
+    max-width: 1500px;
+}
+
+.disciplinas-cabecalho h1 {
+    font-size: 31px;
+    margin-bottom: 12px;
+}
+
+.disciplinas-cabecalho p,
+.disciplinas-vazio p {
+    color: var(--texto-secundario);
+    line-height: 1.7;
+}
+
+.disciplinas-secao {
+    margin-top: 40px;
+}
+
+.disciplinas-resumo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.disciplinas-resumo h2 {
+    font-size: 22px;
+}
+
+.disciplinas-contagem {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: var(--destaque);
+    color: var(--texto-primario);
+    font-size: 14px;
+}
+
+.disciplinas-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 320px;
+    padding: 40px 24px;
+    text-align: center;
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+}
+
+.disciplinas-icone {
+    width: 72px;
+    height: 72px;
+    padding: 18px;
+    border-radius: 20px;
+    background-color: var(--destaque);
+    color: var(--roxo);
+}
+
+.disciplinas-vazio h3 {
+    font-size: 20px;
+}
+
+.disciplinas-vazio p {
+    max-width: 420px;
+}
+
+.pagina-disciplinas a:focus-visible {
+    outline: 3px solid var(--roxo);
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .pagina-disciplinas .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .pagina-disciplinas .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-disciplinas .sidebar li:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .pagina-disciplinas .logo {
+        margin: 0 0 12px;
+    }
+
+    .pagina-disciplinas .item {
+        height: 48px;
+        padding: 0 12px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+
+    .pagina-disciplinas .config-container {
+        position: static;
+    }
+
+    .disciplinas-conteudo {
+        margin-left: 0;
+        min-height: auto;
+        padding: 32px 20px;
+    }
+}
