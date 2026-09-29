@@ -1,0 +1,85 @@
+:root {
+    color-scheme: light;
+    --fundo: #F7F7FB;
+    --superficie: #FFFFFF;
+    --roxo: #7C5CFC;
+    --borda: #E7E7EF;
+    --texto-primario: #20212A;
+    --texto-secundario: #77798A;
+    --destaque: #EEEAFE;
+    --provas: #E85D75;
+    --trabalhos: #E7A93B;
+    --concluidas: #45A56A;
+}
+
+:root[data-tema="escuro"] {
+    color-scheme: dark;
+    --fundo: #14141F;
+    --superficie: #202030;
+    --roxo: #AE98FF;
+    --borda: #3B3B50;
+    --texto-primario: #F2F0FA;
+    --texto-secundario: #B7B5CA;
+    --destaque: #38304F;
+    --provas: #FF8DA3;
+    --trabalhos: #F4C66E;
+    --concluidas: #77D79B;
+}
+
+body {
+    color: var(--texto-primario);
+}
+
+.tema-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: var(--superficie);
+    color: var(--texto-primario);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tema-toggle:hover {
+    background: var(--destaque);
+}
+
+.tema-toggle:focus-visible {
+    outline: 3px solid var(--roxo);
+    outline-offset: 3px;
+}
+
+.sidebar {
+    padding-top: 74px;
+}
+
+.tema-toggle svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tema-sol,
+:root[data-tema="escuro"] .tema-lua {
+    display: none;
+}
+
+:root[data-tema="escuro"] .tema-sol {
+    display: block;
+}

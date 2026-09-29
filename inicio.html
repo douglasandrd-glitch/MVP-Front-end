@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyPlanner</title>
+    <script src="js/tema.js"></script>
     <link rel="stylesheet" href="css\barra-lateral.css" />
     <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="css/tema.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 </head>
 
 <body>
+    <button type="button" class="tema-toggle" data-alternar-tema aria-label="Ativar modo noturno" title="Ativar modo noturno">
+        <svg class="tema-lua" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" /></svg>
+        <svg class="tema-sol" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></svg>
+    </button>
     <nav class="sidebar">
         <ul>
             <li><span class="logo">StudyPlanner</span></li>

@@ -9,11 +9,6 @@
 
 :root {
     --largura-barra-lateral: 270px;
-    --fundo: #F7F7FB;
-    --roxo: #7C5CFC;
-    --borda: #E7E7EF;
-    --texto-primario: #20212A;
-    --texto-secundario: #77798A;
     --largura-main: calc(100% - var(--largura-barra-lateral));
 }
 
@@ -58,7 +53,7 @@ h3 {
     flex-direction: column;
     width: 237px;
     height: 127px;
-    background-color: #fff;
+    background-color: var(--superficie);
     border: 1px solid var(--borda);
     border-radius: 20px;
     padding: 10px 20px;
@@ -71,10 +66,10 @@ h3 {
     font-weight: 600;
 }
 
-.tarefas {color: #7C5CFC;}
-.provas {color: #E85D75;}
-.trabalhos {color: #E7A93B;}
-.concluidas {color: #45A56A;}
+.tarefas {color: var(--roxo);}
+.provas {color: var(--provas);}
+.trabalhos {color: var(--trabalhos);}
+.concluidas {color: var(--concluidas);}
 
 li span {
     color: var(--texto-secundario);
