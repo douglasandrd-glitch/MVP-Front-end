@@ -304,3 +304,117 @@ li span {
     color: rgb(var(--cor));
     background-color: rgba(var(--cor), 0.15);
 }
+
+/* ============================= */
+/* Página Calendário              */
+/* ============================= */
+
+.calendario-container {
+    width: 100%;
+    margin-top: 40px;
+    padding: 30px 20px 35px;
+    background-color: #fff;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+}
+
+.calendario-container .mes {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+/* Grade do calendário */
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+}
+
+/* Nome dos dias da semana */
+
+.dia-semana {
+    padding-left: 20px;
+    color: var(--texto-secundario);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Cada dia */
+
+.dia {
+    min-height: 84px;
+    padding: 14px 20px;
+    background-color: var(--fundo);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Número do dia */
+
+.numero {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--texto-primario);
+}
+
+/* Dias que possuem eventos */
+
+.dia.evento-prova,
+.dia.evento-trabalho,
+.dia.evento-tarefa {
+    background-color: #EEEAFE;
+}
+
+/* Evento dentro do dia */
+
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Bolinha dos eventos */
+
+.bolinha-evento {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Prova */
+
+.evento.prova {
+    color: rgb(232, 93, 117);
+}
+
+.evento.prova .bolinha-evento {
+    background-color: rgb(232, 93, 117);
+}
+
+/* Trabalho */
+
+.evento.trabalho {
+    color: rgb(231, 169, 59);
+}
+
+.evento.trabalho .bolinha-evento {
+    background-color: rgb(231, 169, 59);
+}
+
+/* Tarefa */
+
+.evento.tarefa {
+    color: rgb(69, 165, 106);
+}
+
+.evento.tarefa .bolinha-evento {
+    background-color: rgb(69, 165, 106);
+}
