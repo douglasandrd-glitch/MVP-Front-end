@@ -28,7 +28,7 @@ body {
     padding: 100px 60px;
 }
 
-.boas-vindas {
+.cabecalho {
     h2 {
         font-size: 31px;
         margin-bottom: 15px;
@@ -36,9 +36,16 @@ body {
 
     h4 {
         color: var(--texto-secundario);
-        font-weight: 200;
+        font-weight: 300;
         font-size: 17px;
     }
+
+    display:flex;
+}
+
+.cabecalho .titulo {
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
@@ -46,37 +53,254 @@ h3 {
 }
 
 .cards-grid {
-    margin: 30px 0 40px;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
 }
 
 .card {
     margin: 0;
     display: flex;
     flex-direction: column;
-    width: 237px;
+    width: 100%;
     height: 127px;
     background-color: #fff;
     border: 1px solid var(--borda);
     border-radius: 20px;
     padding: 10px 20px;
     color: var(--texto-secundario);
-    gap:20px;
+    gap: 20px;
+}
+
+.cor1 {
+    --cor: 124, 92, 252
+}
+
+.cor2 {
+    --cor: 232, 93, 117
+}
+
+.cor3 {
+    --cor: 231, 169, 59
+}
+
+.cor4 {
+    --cor: 69, 165, 106
 }
 
 .card-number {
     font-size: 30px;
     font-weight: 600;
+    color: rgb(var(--cor));
 }
-
-.tarefas {color: #7C5CFC;}
-.provas {color: #E85D75;}
-.trabalhos {color: #E7A93B;}
-.concluidas {color: #45A56A;}
 
 li span {
     color: var(--texto-secundario);
     padding: 10px 0;
+}
+
+.visao-geral {
+    display: flex;
+    flex-direction: row;
+}
+
+.proximas-atividades {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    flex: 1;
+}
+
+.proximas-atividades h3 {
+    margin-bottom: 15px;
+}
+
+.atividade {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 80px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid var(--borda);
+    padding: 12px 0;
+    align-items: center;
+}
+
+.vermelha {
+    --cor: 198, 22, 22
+}
+
+.amarela {
+    --cor: 255, 170, 0
+}
+
+.verde {
+    --cor: 1, 150, 1
+}
+
+.bolinha {
+    --raio: 20px;
+    height: var(--raio);
+    width: var(--raio);
+    border-radius: 999px;
+    background-image: linear-gradient(#fff -30%, rgb(var(--cor)) 50%);
+    border: calc(var(--raio) / 15) solid rgb(var(--cor));
+    margin: 0px 24px;
+}
+
+.conteudo-atividade {
+    width: 400px;
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    h5 {
+        color: var(--texto-secundario);
+        font-weight: 400;
+    }
+}
+
+.data {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.situacao {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: 31px;
+    height: 34px;
+    width: 145px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: rgba(var(--cor), 0.15);
+    color: rgb(var(--cor));
+}
+
+.progresso {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 25px 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    width: 250px;
+    height: 200px;
+    gap: 15px;
+}
+
+.progresso h4 {
+    font-size: 18px;
+
+}
+
+.progresso h5 {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--texto-secundario)
+}
+
+.barra-de-progresso {
+    background-color: var(--fundo);
+    border-radius: 99px;
+    margin: 10px 0px;
+    height: 15px;
+}
+
+.progresso-da-barra {
+    background-color: rgb(var(--cor));
+    border-radius: 99px;
+    height: 100%;
+    width: 67%;
+}
+
+/* Início da página Disciplinas */
+
+.add {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    width: 240px;
+    height: 52px;
+    border-radius: 10px;
+    background-color: var(--roxo);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.disciplinas-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.card-disciplina {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--borda);
+    gap: 10px;
+
+    h4 {
+        color: var(--texto-secundario);
+        font-weight: 400;
+    }
+
+    .barra-de-progresso {
+        height: 10px;
+    }
+
+    a {
+        color: var(--roxo);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Início da página Atividades */
+
+.pesquisa {
+    height: 50px;
+    width: 700px;
+    outline: none;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 0 40px;
+    margin: 20px 0;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+}
+
+.filtro {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 40px;
+    /* border: 1px solid #000; */
+    border-radius: 99px;
+    color: rgb(var(--cor));
+    background-color: rgba(var(--cor), 0.15);
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPlanner</title>
+    <link rel="stylesheet" href="css\barra-lateral.css" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><span class="logo">StudyPlanner</span></li>
+            <li><a href="inicio.html" class="item"><i class="bi bi-house"></i> Início</a></li>
+            <li><a href="disciplinas.html" class="item"><i class="bi bi-book"></i> Disciplinas</a></li>
+            <li><a href="atividades.html" class="item active"><i class="bi bi-calendar-check"></i> Atividades</a></li>
+            <li><a href="calendario.html" class="item"><i class="bi bi-calendar3"></i> Calendário</a></li>
+        </ul>
+        <div class="config-container">
+            <a href="#" class="config"><i class="bi bi-gear-fill"></i>Configurações</a>
+        </div>
+    </nav><!-- Barra lateral -->
+    <main class="conteudo">
+        <header class="cabecalho">
+            <div class="titulo">
+                <h2>Minhas atividades</h2>
+                <input type="text" placeholder="Buscar atividade..." class="pesquisa"></input>
+            </div>
+            <a href="nova-atividade.html" class="add">+ Nova atividade</a>
+        </header><!-- cabecalho -->
+        <div class="filtros">
+            <a href="#" class="filtro cor1">Todos</a>
+            <a href="#" class="filtro cor2">Pendentes</a>
+            <a href="#" class="filtro cor3">Em andamento</a>
+            <a href="#" class="filtro cor4">Concluídas</a>
+        </div>
+        <div class="proximas-atividades">
+            <div class="atividade">
+                <div class="bolinha vermelha"></div>
+                <div class="conteudo-atividade">
+                    <h4>Prova de Bioquímica</h4>
+                    <h5>Bioquímica</h5>
+                </div>
+                <div class="data">16/09/2026</div>
+                <div class="situacao cor2">Pendente</div>
+            </div>
+            <div class="atividade">
+                <div class="bolinha amarela"></div>
+                <div class="conteudo-atividade">
+                    <h4>Relatório de Microbiologia</h4>
+                    <h5>Microbiologia</h5>
+                </div>
+                <div class="data">18/09/2026</div>
+                <div class="situacao cor3">Em andamento</div>
+            </div>
+            <div class="atividade">
+                <div class="bolinha verde"></div>
+                <div class="conteudo-atividade">
+                    <h4>Lista de Bioestatística</h4>
+                    <h5>Bioestatística</h5>
+                </div>
+                <div class="data">20/09/2026</div>
+                <div class="situacao cor4">Concluído</div>
+            </div>
+            <div class="atividade">
+                <div class="bolinha verde"></div>
+                <div class="conteudo-atividade">
+                    <h4>Lista de Bioestatística</h4>
+                    <h5>Biologia Celular</h5>
+                </div>
+                <div class="data">25/09/2026</div>
+                <div class="situacao cor4">Concluído</div>
+            </div>
+        </div><!-- Próximas atividades -->
+    </main><!-- Conteúdo principal -->
+</body>
+
+</html>

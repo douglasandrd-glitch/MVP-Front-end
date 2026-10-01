@@ -14,49 +14,76 @@
     <nav class="sidebar">
         <ul>
             <li><span class="logo">StudyPlanner</span></li>
-            <li><a href="#" class="item active"><i class="bi bi-house"></i> Início</a></li>
-            <li><a href="#" class="item"><i class="bi bi-book"></i> Disciplinas</a></li>
-            <li><a href="#" class="item"><i class="bi bi-calendar-check"></i> Atividades</a></li>
-            <li><a href="#" class="item"><i class="bi bi-calendar3"></i> Calendário</a></li>
+            <li><a href="inicio.html" class="item active"><i class="bi bi-house"></i> Início</a></li>
+            <li><a href="disciplinas.html" class="item"><i class="bi bi-book"></i> Disciplinas</a></li>
+            <li><a href="atividades.html" class="item"><i class="bi bi-calendar-check"></i> Atividades</a></li>
+            <li><a href="calendario.html" class="item"><i class="bi bi-calendar3"></i> Calendário</a></li>
         </ul>
         <div class="config-container">
             <a href="#" class="config"><i class="bi bi-gear-fill"></i>Configurações</a>
         </div>
     </nav><!-- Barra lateral -->
     <main class="conteudo">
-        <div class="boas-vindas">
-            <h2>Olá, estudante!</h2>
-            <h4>Aqui está um resumo da sua rotina de estudos.</h4>
-        </div><!-- Boas vindas -->
+        <header class="cabecalho">
+            <div class="titulo">
+                <h2>Olá, estudante!</h2>
+                <h4>Aqui está um resumo da sua rotina de estudos.</h4>
+            </div>
+        </header><!-- cabecalho -->
         <section class="cards-grid">
             <div class="card">
-                <span class="card-number tarefas">5</span>
+                <span class="card-number cor1">5</span>
                 <span class="texto">Tarefas pendentes</span>
             </div>
             <div class="card">
-                <span class="card-number provas">2</span>
+                <span class="card-number cor2">2</span>
                 <span class="texto">Provas próximas</span>
             </div>
             <div class="card">
-                <span class="card-number trabalhos">3</span>
+                <span class="card-number cor3">3</span>
                 <span class="texto">Trabalhos</span>
             </div>
             <div class="card">
-                <span class="card-number concluidas">8</span>
+                <span class="card-number cor4">8</span>
                 <span class="texto">Concluídas</span>
             </div>
         </section><!-- Grade de cartões -->
         <section class="visao-geral">
             <div class="proximas-atividades">
                 <h3>Próximas atividades</h3>
-                <div class="atividade"></div>
-                <div class="atividade"></div>
-                <div class="atividade"></div>
+                <div class="atividade">
+                    <div class="bolinha vermelha"></div>
+                    <div class="conteudo-atividade">
+                        <h4>Prova de Bioquímica</h4>
+                        <h5>Amanhã - 14:00</h5>
+                    </div>
+                    <div class="situacao cor2">Pendente</div>
+                </div>
+                <div class="atividade">
+                    <div class="bolinha amarela"></div>
+                    <div class="conteudo-atividade">
+                        <h4>Relatório de Microbiologia</h4>
+                        <h5>18/09 - 23:59</h5>
+                    </div>
+                    <div class="situacao cor3">Em andamento</div>
+                </div>
+                <div class="atividade">
+                    <div class="bolinha verde"></div>
+                    <div class="conteudo-atividade">
+                        <h4>Lista de Bioestatística</h4>
+                        <h5>20/09 - 18:00</h5>
+                    </div>
+                    <div class="situacao cor4">Concluído</div>
+                </div>
             </div><!-- Próximas atividades -->
-            <d class="progresso">
-                
-            </d
-            iv><!-- Progresso -->
+            <div class="progresso">
+                <h4>Progresso da semana</h4>
+                <h5>8 de 12 atividades</h5>
+                <div class="barra-de-progresso">
+                    <div class="progresso-da-barra cor1"></div>
+                </div>
+                <h3>67% concluído</h3>
+            </div><!-- Progresso -->
         </section><!-- Visão Geral-->
     </main><!-- Conteúdo principal -->
 </body>

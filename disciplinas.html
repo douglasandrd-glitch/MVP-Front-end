@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPlanner</title>
+    <link rel="stylesheet" href="css\barra-lateral.css" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li><span class="logo">StudyPlanner</span></li>
+            <li><a href="inicio.html" class="item"><i class="bi bi-house"></i> Início</a></li>
+            <li><a href="disciplinas.html" class="item active"><i class="bi bi-book"></i> Disciplinas</a></li>
+            <li><a href="atividades.html" class="item"><i class="bi bi-calendar-check"></i> Atividades</a></li>
+            <li><a href="calendario.html" class="item"><i class="bi bi-calendar3"></i> Calendário</a></li>
+        </ul>
+        <div class="config-container">
+            <a href="#" class="config"><i class="bi bi-gear-fill"></i>Configurações</a>
+        </div>
+    </nav><!-- Barra lateral -->
+    <main class="conteudo">
+        <header class="cabecalho">
+            <div class="titulo">
+                <h2>Minhas disciplinas</h2>
+                <h4>Acompanhe as atividades de cada matéria.</h4>
+            </div>
+            <a href="#" class="add">+ Adicionar disciplina</a>
+        </header><!-- cabecalho -->
+        <section class="disciplinas-grid">
+            <div class="card-disciplina">
+                <h3>Bioquimica</h3>
+                <h4>5 atividades</h4>
+                <h4>2 pendentes</h4>
+                <div class="barra-de-progresso">
+                    <div class="progresso-da-barra cor1"></div>
+                </div>
+                <a href="#">Ver atividades &rarr;</a>
+            </div>
+            <div class="card-disciplina">
+                <h3>Microbiologia</h3>
+                <h4>3 atividades</h4>
+                <h4>1 pendentes</h4>
+                <div class="barra-de-progresso">
+                    <div class="progresso-da-barra cor2"></div>
+                </div>
+                <a href="#">Ver atividades &rarr;</a>
+            </div>
+            <div class="card-disciplina">
+                <h3>Bioestatística</h3>
+                <h4>4 atividades</h4>
+                <h4>3 pendentes</h4>
+                <div class="barra-de-progresso">
+                    <div class="progresso-da-barra cor3"></div>
+                </div>
+                <a href="#">Ver atividades &rarr;</a>
+            </div>
+            <div class="card-disciplina">
+                <h3>Biologia Celular</h3>
+                <h4>6 atividades</h4>
+                <h4>2 pendentes</h4>
+                <div class="barra-de-progresso">
+                    <div class="progresso-da-barra cor4"></div>
+                </div>
+                <a href="#">Ver atividades &rarr;</a>
+            </div>
+        </section><!-- Grade de disciplinas -->
+    </main><!-- Conteúdo principal -->
+</body>
+
+</html>
