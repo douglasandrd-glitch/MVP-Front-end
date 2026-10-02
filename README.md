@@ -6,11 +6,12 @@ Nome da equipe: Núcleo 6
 
 Integrantes
 
-- Vitória Ferreira da Conceição 
-- Bruno Soares Da Silva
-- Rafael Xavier De Oliveira
-- klara Vitória da Silva Cruz 
+- Bruno Soares da Silva
 - Douglas Rodrigues Andrade das Neves 
+- Fernando Oliveira dos Santos
+- Klara Vitória da Silva Cruz 
+- Rafael Xavier de Oliveira
+- Vitória Ferreira da Conceição 
 ---
 
 🎯 Situação-problema
