@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/atividades.css?v=3">
     <script src="js/tema.js"></script>
+    <script src="js/atividades.js?v=3" defer></script>
 </head>
 
-<body>
+<body class="pagina-atividades">
     <button type="button" class="tema-botao" data-alternar-tema aria-label="Ativar modo noturno" title="Ativar modo noturno">
         <svg class="tema-sol" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <circle cx="12" cy="12" r="4" />
@@ -22,33 +24,35 @@
             <path d="M20.9 13.1A9 9 0 0 1 10.9 3.1a9 9 0 1 0 10 10Z" />
         </svg>
     </button>
-    <nav class="sidebar">
+    <nav class="sidebar" aria-label="Navegação principal">
         <ul>
             <li><span class="logo">StudyPlanner</span></li>
-            <li><a href="inicio.html" class="item"><i class="bi bi-house"></i> Início</a></li>
-            <li><a href="disciplinas.html" class="item"><i class="bi bi-book"></i> Disciplinas</a></li>
-            <li><a href="atividades.html" class="item active"><i class="bi bi-calendar-check"></i> Atividades</a></li>
-            <li><a href="calendario.html" class="item"><i class="bi bi-calendar3"></i> Calendário</a></li>
+            <li><a href="inicio.html" class="item" aria-label="Início"><i class="bi bi-house" aria-hidden="true"></i> Início</a></li>
+            <li><a href="disciplinas.html" class="item" aria-label="Disciplinas"><i class="bi bi-book" aria-hidden="true"></i> Disciplinas</a></li>
+            <li><a href="atividades.html" class="item active" aria-label="Atividades" aria-current="page"><i class="bi bi-calendar-check" aria-hidden="true"></i> Atividades</a></li>
+            <li><a href="calendario.html" class="item" aria-label="Calendário"><i class="bi bi-calendar3" aria-hidden="true"></i> Calendário</a></li>
         </ul>
         <div class="config-container">
-            <a href="#" class="config"><i class="bi bi-gear-fill"></i>Configurações</a>
+            <a href="#" class="config" aria-label="Configurações"><i class="bi bi-gear-fill" aria-hidden="true"></i>Configurações</a>
         </div>
     </nav><!-- Barra lateral -->
     <main class="conteudo">
         <header class="cabecalho">
             <div class="titulo">
                 <h2>Minhas atividades</h2>
-                <input type="text" placeholder="Buscar atividade..." class="pesquisa"></input>
+                <input type="search" placeholder="Buscar atividade..." class="pesquisa" aria-label="Buscar atividade">
             </div>
-            <a href="nova-atividade.html" class="add">+ Nova atividade</a>
+            <button type="button" class="add" id="nova-atividade" aria-haspopup="dialog">+ Nova atividade</button>
         </header><!-- cabecalho -->
-        <div class="filtros">
-            <a href="#" class="filtro cor1">Todos</a>
-            <a href="#" class="filtro cor2">Pendentes</a>
-            <a href="#" class="filtro cor3">Em andamento</a>
-            <a href="#" class="filtro cor4">Concluídas</a>
+        <div class="filtros" role="group" aria-label="Filtrar por situação">
+            <button type="button" class="filtro cor1" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filtro cor2" data-filtro="Pendente" aria-pressed="false">Pendentes</button>
+            <button type="button" class="filtro cor3" data-filtro="Em andamento" aria-pressed="false">Em andamento</button>
+            <button type="button" class="filtro cor4" data-filtro="Concluído" aria-pressed="false">Concluídas</button>
         </div>
-        <div class="proximas-atividades">
+        <p class="mensagem-atividades" id="mensagem-atividades" role="status"></p>
+        <button type="button" class="cancelar-atividade" id="desfazer-exclusao" hidden>Desfazer última exclusão</button>
+        <div class="proximas-atividades" id="lista-atividades" aria-label="Atividades">
             <div class="atividade">
                 <div class="bolinha vermelha"></div>
                 <div class="conteudo-atividade">
@@ -86,7 +90,60 @@
                 <div class="situacao cor4">Concluído</div>
             </div>
         </div><!-- Próximas atividades -->
+        <p id="lista-vazia" hidden>Nenhuma atividade encontrada para esta busca.</p>
     </main><!-- Conteúdo principal -->
+    <dialog id="dialogo-atividade" aria-labelledby="titulo-formulario" aria-describedby="ajuda-formulario">
+        <div class="formulario-cabecalho">
+            <h2 id="titulo-formulario">Nova atividade</h2>
+            <button type="button" class="fechar-formulario" data-fechar-formulario aria-label="Fechar formulário">&times;</button>
+        </div>
+        <p id="ajuda-formulario">Organize sua próxima entrega. Os campos com * são obrigatórios.</p>
+        <form id="formulario-atividade">
+            <div class="campo campo-inteiro">
+                <label for="atividade-titulo">Título *</label>
+                <input id="atividade-titulo" name="titulo" required maxlength="120" placeholder="Ex.: Relatório de Microbiologia" autofocus>
+            </div>
+            <div class="campo campo-inteiro">
+                <label for="atividade-disciplina">Disciplina *</label>
+                <input id="atividade-disciplina" name="disciplina" list="opcoes-disciplinas" required maxlength="80" placeholder="Selecione ou digite uma disciplina">
+                <datalist id="opcoes-disciplinas">
+                    <option value="Bioquímica"></option>
+                    <option value="Microbiologia"></option>
+                    <option value="Bioestatística"></option>
+                    <option value="Biologia Celular"></option>
+                </datalist>
+            </div>
+            <div class="campo">
+                <label for="atividade-tipo">Tipo *</label>
+                <select id="atividade-tipo" name="tipo" required>
+                    <option value="Tarefa">Tarefa</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Prova">Prova</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="atividade-prazo">Prazo *</label>
+                <input type="date" id="atividade-prazo" name="prazo" required min="0001-01-01" max="9999-12-31">
+            </div>
+            <div class="campo campo-inteiro">
+                <label for="atividade-situacao">Situação *</label>
+                <select id="atividade-situacao" name="situacao" required>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluído">Concluída</option>
+                </select>
+            </div>
+            <div class="campo campo-inteiro">
+                <label for="atividade-descricao">Anotações (opcional)</label>
+                <textarea id="atividade-descricao" name="descricao" rows="3" maxlength="1000" placeholder="Anote instruções ou detalhes da atividade"></textarea>
+            </div>
+            <p class="campo-inteiro erro-formulario" id="erro-formulario" role="alert"></p>
+            <div class="formulario-acoes campo-inteiro">
+                <button type="button" class="cancelar-atividade" data-fechar-formulario>Cancelar</button>
+                <button type="submit" class="add">Salvar atividade</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>

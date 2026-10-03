@@ -1,0 +1,87 @@
+.pagina-atividades .cabecalho { gap: 24px; align-items: flex-start; }
+.pagina-atividades .titulo { flex: 1; min-width: 0; }
+.pagina-atividades .pesquisa { width: 100%; padding: 0 18px; }
+.pagina-atividades button { cursor: pointer; font-family: inherit; }
+.pagina-atividades .add { border: 0; flex-shrink: 0; font-size: 15px; padding: 0 20px; width: auto; }
+.pagina-atividades .filtros { flex-wrap: wrap; }
+.pagina-atividades .filtro { border: 1px solid transparent; }
+.pagina-atividades .filtro[aria-pressed="true"] { border-color: currentColor; }
+.pagina-atividades :is(button, input, select, textarea):focus-visible { outline: 2px solid var(--roxo); outline-offset: 3px; }
+.pagina-atividades .atividade { height: auto; min-height: 80px; gap: 18px; padding: 18px; }
+.pagina-atividades .atividade[hidden] { display: none; }
+.pagina-atividades .bolinha { margin: 0; flex-shrink: 0; }
+.pagina-atividades .conteudo-atividade { flex: 1; min-width: 0; width: auto; overflow-wrap: anywhere; }
+.pagina-atividades .situacao { margin: 0; flex-shrink: 0; }
+.pagina-atividades .data { white-space: nowrap; }
+.excluir-atividade { flex-shrink: 0; border: 1px solid var(--borda); border-radius: 8px; padding: 10px 12px; background: var(--superficie); color: #B4233D; font-size: 13px; }
+.excluir-atividade:hover { background: var(--destaque); }
+.rodape-atividade { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; flex-basis: 100%; min-width: 0; padding-top: 12px; border-top: 1px solid var(--borda); }
+.anotacoes-atividade { flex: 1 1 220px; min-width: 0; overflow-wrap: anywhere; font-size: 14px; }
+.acoes-atividade { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin-left: auto; }
+.pagina-atividades .atividade { flex-wrap: wrap; }
+.editar-atividade, .concluir-atividade { border: 1px solid var(--borda); border-radius: 8px; padding: 10px 12px; background: var(--superficie); font-size: 13px; }
+.editar-atividade { color: var(--roxo); }
+.concluir-atividade { color: #287044; }
+:root[data-tema="escuro"] .concluir-atividade { color: #8DDDA8; }
+.editar-atividade:hover, .concluir-atividade:hover { background: var(--destaque); }
+:root[data-tema="escuro"] .excluir-atividade { color: #FF9AAB; }
+#desfazer-exclusao { margin-top: 10px; }
+.descricao-atividade { margin-top: 4px; color: var(--texto-secundario); font-size: 14px; line-height: 1.5; white-space: pre-wrap; }
+.mensagem-atividades { color: var(--texto-secundario); font-size: 14px; margin-top: 16px; }
+.mensagem-atividades:empty, .erro-formulario:empty { display: none; }
+#lista-vazia { margin-top: 24px; color: var(--texto-secundario); }
+
+#dialogo-atividade {
+    margin: auto;
+    width: min(580px, calc(100% - 32px));
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    padding: 28px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background: var(--superficie);
+    color: var(--texto-primario);
+    box-shadow: 0 24px 80px #0003;
+}
+#dialogo-atividade::backdrop { background: #11112299; }
+body:has(#dialogo-atividade[open]) { overflow: hidden; }
+.formulario-cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.formulario-cabecalho h2 { font-size: 24px; }
+.fechar-formulario { border: 0; border-radius: 8px; width: 36px; height: 36px; background: var(--fundo); color: var(--texto-primario); font-size: 26px; }
+#ajuda-formulario { color: var(--texto-secundario); font-size: 14px; line-height: 1.5; margin: 10px 0 24px; }
+#formulario-atividade { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.campo { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.campo-inteiro { grid-column: 1 / -1; }
+.campo label { font-size: 14px; font-weight: 600; }
+.campo :is(input, select, textarea) { width: 100%; min-width: 0; border: 1px solid var(--borda); border-radius: 10px; padding: 11px 12px; background: var(--fundo); color: var(--texto-primario); font: inherit; font-size: 14px; }
+.campo textarea { resize: vertical; min-height: 80px; }
+.campo ::placeholder { color: var(--texto-secundario); }
+.formulario-acoes { display: flex; justify-content: flex-end; gap: 12px; padding-top: 8px; }
+.cancelar-atividade { border: 1px solid var(--borda); border-radius: 10px; padding: 12px 20px; background: var(--superficie); color: var(--texto-primario); font-size: 15px; }
+.erro-formulario { color: var(--texto-primario); border-left: 3px solid #E85D75; padding-left: 12px; font-size: 14px; }
+
+@media (max-width: 1000px) {
+    .pagina-atividades .conteudo { padding: 100px 24px 40px; }
+    .pagina-atividades .cabecalho { flex-wrap: wrap; }
+    .pagina-atividades .cabecalho .titulo { flex-basis: 100%; }
+    .pagina-atividades .cabecalho .add { margin: 0 0 20px; }
+    .pagina-atividades .atividade { flex-wrap: wrap; }
+    .pagina-atividades .conteudo-atividade { flex-basis: calc(100% - 56px); }
+    .pagina-atividades .situacao { margin-left: auto; }
+}
+@media (max-width: 600px) {
+    .pagina-atividades { --largura-barra-lateral: 76px; }
+    .pagina-atividades .sidebar { padding: 8px; }
+    .pagina-atividades .sidebar ul { padding: 0; }
+    .pagina-atividades .logo { font-size: 0; margin: 24px 0; }
+    .pagina-atividades .logo::after { content: 'SP'; font-size: 22px; }
+    .pagina-atividades .item { font-size: 0; padding: 0; justify-content: center; }
+    .pagina-atividades .item i { font-size: 22px; margin: 0; }
+    .pagina-atividades .config { font-size: 0; }
+    .pagina-atividades .config i { font-size: 22px; margin: 0; }
+    .pagina-atividades .conteudo { padding-right: 16px; padding-left: 16px; }
+    .pagina-atividades .cabecalho h2 { font-size: 25px; }
+    #dialogo-atividade { padding: 20px; }
+    #formulario-atividade { grid-template-columns: 1fr; }
+    .formulario-acoes { flex-wrap: wrap; }
+}
