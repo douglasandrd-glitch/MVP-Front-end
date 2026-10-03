@@ -1,0 +1,106 @@
+:root {
+    color-scheme: light;
+    --fundo: #F7F7FB;
+    --superficie: #fff;
+    --roxo: #7C5CFC;
+    --borda: #E7E7EF;
+    --texto-primario: #20212A;
+    --texto-secundario: #77798A;
+    --destaque: #EEEAFE;
+}
+
+:root[data-tema="escuro"] {
+    color-scheme: dark;
+    --fundo: #151521;
+    --superficie: #212132;
+    --roxo: #B3A0FF;
+    --borda: #3B3B51;
+    --texto-primario: #F2F0FA;
+    --texto-secundario: #B8B6CA;
+    --destaque: #35304F;
+}
+
+body {
+    color: var(--texto-primario);
+}
+
+.sidebar,
+.card,
+.atividade,
+.progresso,
+.card-disciplina,
+.calendario-container,
+.container {
+    background-color: var(--superficie);
+}
+
+.item.active,
+.item:hover,
+.dia.evento-prova,
+.dia.evento-trabalho,
+.dia.evento-tarefa {
+    background-color: var(--destaque);
+}
+
+.pesquisa {
+    background-color: var(--superficie);
+    color: var(--texto-primario);
+}
+
+.pesquisa::placeholder,
+.login-senha input::placeholder {
+    color: var(--texto-secundario);
+}
+
+.tema-botao {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 88px;
+    height: 44px;
+    padding: 3px;
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+    background: var(--superficie);
+    color: var(--texto-primario);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tema-botao svg {
+    width: 38px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 999px;
+    color: var(--texto-secundario);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+:root:not([data-tema="escuro"]) .tema-sol,
+:root[data-tema="escuro"] .tema-lua {
+    color: var(--roxo);
+    background-color: var(--destaque);
+}
+
+.tema-botao:hover {
+    background: var(--destaque);
+}
+
+.tema-botao:focus-visible {
+    outline: 2px solid var(--roxo);
+    outline-offset: 3px;
+}
+
+:root[data-tema="escuro"] .add,
+:root[data-tema="escuro"] button[type="submit"] {
+    color: #151521;
+}
