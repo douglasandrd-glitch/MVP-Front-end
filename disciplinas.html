@@ -51,13 +51,13 @@
                     <label for="progresso-1">0 de 1 atividade concluída</label>
                     <progress id="progresso-1" value="0" max="1">0%</progress>
                 </div>
-                <div class="dados-disciplina">
-                    <label>Professor(a)<input type="text" aria-label="Professor(a) de Bioquímica" placeholder="Nome do professor" maxlength="100"></label>
-                    <label>Horário<input type="text" aria-label="Horário de Bioquímica" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
-                    <label>Sala<input type="text" aria-label="Sala de Bioquímica" placeholder="Ex.: sala 204" maxlength="40"></label>
-                    <label>Semestre<input type="text" aria-label="Semestre de Bioquímica" placeholder="Ex.: 2026.2" maxlength="40"></label>
-                </div>
-                <label class="anotacoes-disciplina">Anotações<textarea aria-label="Anotações de Bioquímica" rows="2" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+                <dl class="dados-disciplina">
+                    <div><dt>Professor(a)</dt><dd>Não informado</dd></div>
+                    <div><dt>Horário</dt><dd>A definir</dd></div>
+                    <div><dt>Sala</dt><dd>A definir</dd></div>
+                    <div><dt>Semestre</dt><dd>Não informado</dd></div>
+                </dl>
+                <div class="anotacoes-disciplina"><h4>Anotações</h4><p>Sem anotações.</p></div>
                 <!-- details oferece expansão e navegação por teclado sem JavaScript. -->
                 <details class="atividades-disciplina">
                     <summary>Ver atividades <span class="sr-only">de Bioquímica</span></summary>
@@ -65,6 +65,10 @@
                         <li><a href="atividades.html#titulo-1">Prova de Bioquímica</a><span class="prazo-disciplina">Prazo: 16/09/2026</span><span class="status-disciplina">Pendente</span></li>
                     </ul>
                 </details>
+                <div class="acoes-disciplina" role="group" aria-label="Ações de Bioquímica">
+                    <button type="button" class="editar-disciplina" popovertarget="editar-disciplina-1" aria-label="Editar Bioquímica">Editar</button>
+                    <button type="button" class="excluir-disciplina" popovertarget="excluir-disciplina-1" aria-label="Excluir Bioquímica">Excluir</button>
+                </div>
             </article>
             <article class="card-disciplina cor2" aria-labelledby="disciplina-2">
                 <h3 id="disciplina-2">Microbiologia</h3>
@@ -73,13 +77,13 @@
                     <label for="progresso-2">0 de 1 atividade concluída</label>
                     <progress id="progresso-2" value="0" max="1">0%</progress>
                 </div>
-                <div class="dados-disciplina">
-                    <label>Professor(a)<input type="text" aria-label="Professor(a) de Microbiologia" placeholder="Nome do professor" maxlength="100"></label>
-                    <label>Horário<input type="text" aria-label="Horário de Microbiologia" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
-                    <label>Sala<input type="text" aria-label="Sala de Microbiologia" placeholder="Ex.: sala 204" maxlength="40"></label>
-                    <label>Semestre<input type="text" aria-label="Semestre de Microbiologia" placeholder="Ex.: 2026.2" maxlength="40"></label>
-                </div>
-                <label class="anotacoes-disciplina">Anotações<textarea aria-label="Anotações de Microbiologia" rows="2" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+                <dl class="dados-disciplina">
+                    <div><dt>Professor(a)</dt><dd>Não informado</dd></div>
+                    <div><dt>Horário</dt><dd>A definir</dd></div>
+                    <div><dt>Sala</dt><dd>A definir</dd></div>
+                    <div><dt>Semestre</dt><dd>Não informado</dd></div>
+                </dl>
+                <div class="anotacoes-disciplina"><h4>Anotações</h4><p>Sem anotações.</p></div>
                 <!-- details oferece expansão e navegação por teclado sem JavaScript. -->
                 <details class="atividades-disciplina">
                     <summary>Ver atividades <span class="sr-only">de Microbiologia</span></summary>
@@ -87,6 +91,10 @@
                         <li><a href="atividades.html#titulo-2">Relatório de Microbiologia</a><span class="prazo-disciplina">Prazo: 18/09/2026</span><span class="status-disciplina">Em andamento</span></li>
                     </ul>
                 </details>
+                <div class="acoes-disciplina" role="group" aria-label="Ações de Microbiologia">
+                    <button type="button" class="editar-disciplina" popovertarget="editar-disciplina-2" aria-label="Editar Microbiologia">Editar</button>
+                    <button type="button" class="excluir-disciplina" popovertarget="excluir-disciplina-2" aria-label="Excluir Microbiologia">Excluir</button>
+                </div>
             </article>
             <article class="card-disciplina cor3" aria-labelledby="disciplina-3">
                 <h3 id="disciplina-3">Bioestatística</h3>
@@ -95,13 +103,13 @@
                     <label for="progresso-3">1 de 1 atividade concluída</label>
                     <progress id="progresso-3" value="1" max="1">100%</progress>
                 </div>
-                <div class="dados-disciplina">
-                    <label>Professor(a)<input type="text" aria-label="Professor(a) de Bioestatística" placeholder="Nome do professor" maxlength="100"></label>
-                    <label>Horário<input type="text" aria-label="Horário de Bioestatística" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
-                    <label>Sala<input type="text" aria-label="Sala de Bioestatística" placeholder="Ex.: sala 204" maxlength="40"></label>
-                    <label>Semestre<input type="text" aria-label="Semestre de Bioestatística" placeholder="Ex.: 2026.2" maxlength="40"></label>
-                </div>
-                <label class="anotacoes-disciplina">Anotações<textarea aria-label="Anotações de Bioestatística" rows="2" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+                <dl class="dados-disciplina">
+                    <div><dt>Professor(a)</dt><dd>Não informado</dd></div>
+                    <div><dt>Horário</dt><dd>A definir</dd></div>
+                    <div><dt>Sala</dt><dd>A definir</dd></div>
+                    <div><dt>Semestre</dt><dd>Não informado</dd></div>
+                </dl>
+                <div class="anotacoes-disciplina"><h4>Anotações</h4><p>Sem anotações.</p></div>
                 <!-- details oferece expansão e navegação por teclado sem JavaScript. -->
                 <details class="atividades-disciplina">
                     <summary>Ver atividades <span class="sr-only">de Bioestatística</span></summary>
@@ -109,6 +117,10 @@
                         <li><a href="atividades.html#titulo-3">Lista de Bioestatística</a><span class="prazo-disciplina">Prazo: 20/09/2026</span><span class="status-disciplina">Concluído</span></li>
                     </ul>
                 </details>
+                <div class="acoes-disciplina" role="group" aria-label="Ações de Bioestatística">
+                    <button type="button" class="editar-disciplina" popovertarget="editar-disciplina-3" aria-label="Editar Bioestatística">Editar</button>
+                    <button type="button" class="excluir-disciplina" popovertarget="excluir-disciplina-3" aria-label="Excluir Bioestatística">Excluir</button>
+                </div>
             </article>
             <article class="card-disciplina cor4" aria-labelledby="disciplina-4">
                 <h3 id="disciplina-4">Biologia Celular</h3>
@@ -117,13 +129,13 @@
                     <label for="progresso-4">1 de 1 atividade concluída</label>
                     <progress id="progresso-4" value="1" max="1">100%</progress>
                 </div>
-                <div class="dados-disciplina">
-                    <label>Professor(a)<input type="text" aria-label="Professor(a) de Biologia Celular" placeholder="Nome do professor" maxlength="100"></label>
-                    <label>Horário<input type="text" aria-label="Horário de Biologia Celular" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
-                    <label>Sala<input type="text" aria-label="Sala de Biologia Celular" placeholder="Ex.: sala 204" maxlength="40"></label>
-                    <label>Semestre<input type="text" aria-label="Semestre de Biologia Celular" placeholder="Ex.: 2026.2" maxlength="40"></label>
-                </div>
-                <label class="anotacoes-disciplina">Anotações<textarea aria-label="Anotações de Biologia Celular" rows="2" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+                <dl class="dados-disciplina">
+                    <div><dt>Professor(a)</dt><dd>Não informado</dd></div>
+                    <div><dt>Horário</dt><dd>A definir</dd></div>
+                    <div><dt>Sala</dt><dd>A definir</dd></div>
+                    <div><dt>Semestre</dt><dd>Não informado</dd></div>
+                </dl>
+                <div class="anotacoes-disciplina"><h4>Anotações</h4><p>Sem anotações.</p></div>
                 <!-- details oferece expansão e navegação por teclado sem JavaScript. -->
                 <details class="atividades-disciplina">
                     <summary>Ver atividades <span class="sr-only">de Biologia Celular</span></summary>
@@ -131,26 +143,156 @@
                         <li><a href="atividades.html#titulo-4">Lista de Bioestatística</a><span class="prazo-disciplina">Prazo: 25/09/2026</span><span class="status-disciplina">Concluído</span></li>
                     </ul>
                 </details>
+                <div class="acoes-disciplina" role="group" aria-label="Ações de Biologia Celular">
+                    <button type="button" class="editar-disciplina" popovertarget="editar-disciplina-4" aria-label="Editar Biologia Celular">Editar</button>
+                    <button type="button" class="excluir-disciplina" popovertarget="excluir-disciplina-4" aria-label="Excluir Biologia Celular">Excluir</button>
+                </div>
             </article>
         </section>
     </main><!-- Conteúdo principal -->
     <!-- O popover é nativo; preencher esta prévia não cadastra disciplinas. -->
-    <div id="nova-disciplina" popover role="dialog" aria-labelledby="titulo-nova-disciplina" aria-describedby="aviso-cadastro">
+    <div id="nova-disciplina" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-nova-disciplina" aria-describedby="aviso-cadastro">
         <div class="cabecalho-formulario">
             <h2 id="titulo-nova-disciplina">Adicionar disciplina</h2>
             <button type="button" class="fechar-disciplina" popovertarget="nova-disciplina" popovertargetaction="hide" aria-label="Fechar formulário">×</button>
         </div>
-        <p id="aviso-cadastro">Formulário demonstrativo. Os campos podem ser preenchidos, mas o cadastro não é salvo nesta versão.</p>
+        <p id="aviso-cadastro" class="aviso-formulario">Formulário demonstrativo. Os campos podem ser preenchidos, mas o cadastro não é salvo nesta versão.</p>
         <div class="campos-cadastro">
             <label class="campo-largo">Nome da disciplina<input type="text" placeholder="Ex.: Bioquímica" maxlength="100" autofocus></label>
             <label class="campo-largo">Professor(a)<input type="text" placeholder="Nome do professor" maxlength="100"></label>
             <label>Horário<input type="text" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
             <label>Sala<input type="text" placeholder="Ex.: sala 204" maxlength="40"></label>
             <label class="campo-largo">Semestre<input type="text" placeholder="Ex.: 2026.2" maxlength="40"></label>
+            <label class="campo-largo">Anotações<textarea rows="3" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
         </div>
         <div class="acoes-cadastro">
             <button type="button" class="cancelar-disciplina" popovertarget="nova-disciplina" popovertargetaction="hide">Fechar prévia</button>
-            <button type="button" class="add" disabled title="Cadastro disponível em uma futura versão com JavaScript ou servidor">Salvar disciplina</button>
+            <button type="button" class="add" disabled title="Ação demonstrativa do protótipo">Salvar disciplina</button>
+        </div>
+    </div>
+    <!-- Edição e exclusão são prévias nativas: não modificam os cards. -->
+    <div id="editar-disciplina-1" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-editar-1" aria-describedby="aviso-editar-1">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-editar-1">Editar disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="editar-disciplina-1" popovertargetaction="hide" aria-label="Fechar edição de Bioquímica">×</button>
+        </div>
+        <p id="aviso-editar-1" class="aviso-formulario">Prévia de edição. O preenchimento não altera o card neste protótipo.</p>
+        <div class="campos-cadastro">
+            <label class="campo-largo">Nome da disciplina<input type="text" value="Bioquímica" maxlength="100" autofocus></label>
+            <label class="campo-largo">Professor(a)<input type="text" placeholder="Nome do professor" maxlength="100"></label>
+            <label>Horário<input type="text" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
+            <label>Sala<input type="text" placeholder="Ex.: sala 204" maxlength="40"></label>
+            <label class="campo-largo">Semestre<input type="text" placeholder="Ex.: 2026.2" maxlength="40"></label>
+            <label class="campo-largo">Anotações<textarea rows="3" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+        </div>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="editar-disciplina-1" popovertargetaction="hide">Fechar prévia</button>
+            <button type="button" class="add" disabled title="Ação demonstrativa do protótipo">Salvar alterações</button>
+        </div>
+    </div>
+    <div id="excluir-disciplina-1" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-excluir-1" aria-describedby="aviso-excluir-1">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-excluir-1">Excluir disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="excluir-disciplina-1" popovertargetaction="hide" aria-label="Fechar exclusão de Bioquímica">×</button>
+        </div>
+        <p class="nome-exclusao">Bioquímica</p>
+        <p id="aviso-excluir-1" class="aviso-formulario">Prévia da exclusão. Nenhuma disciplina será removida neste protótipo.</p>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="excluir-disciplina-1" popovertargetaction="hide" autofocus>Cancelar</button>
+            <button type="button" class="excluir-disciplina" disabled title="Ação demonstrativa do protótipo">Excluir disciplina</button>
+        </div>
+    </div>
+    <div id="editar-disciplina-2" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-editar-2" aria-describedby="aviso-editar-2">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-editar-2">Editar disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="editar-disciplina-2" popovertargetaction="hide" aria-label="Fechar edição de Microbiologia">×</button>
+        </div>
+        <p id="aviso-editar-2" class="aviso-formulario">Prévia de edição. O preenchimento não altera o card neste protótipo.</p>
+        <div class="campos-cadastro">
+            <label class="campo-largo">Nome da disciplina<input type="text" value="Microbiologia" maxlength="100" autofocus></label>
+            <label class="campo-largo">Professor(a)<input type="text" placeholder="Nome do professor" maxlength="100"></label>
+            <label>Horário<input type="text" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
+            <label>Sala<input type="text" placeholder="Ex.: sala 204" maxlength="40"></label>
+            <label class="campo-largo">Semestre<input type="text" placeholder="Ex.: 2026.2" maxlength="40"></label>
+            <label class="campo-largo">Anotações<textarea rows="3" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+        </div>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="editar-disciplina-2" popovertargetaction="hide">Fechar prévia</button>
+            <button type="button" class="add" disabled title="Ação demonstrativa do protótipo">Salvar alterações</button>
+        </div>
+    </div>
+    <div id="excluir-disciplina-2" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-excluir-2" aria-describedby="aviso-excluir-2">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-excluir-2">Excluir disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="excluir-disciplina-2" popovertargetaction="hide" aria-label="Fechar exclusão de Microbiologia">×</button>
+        </div>
+        <p class="nome-exclusao">Microbiologia</p>
+        <p id="aviso-excluir-2" class="aviso-formulario">Prévia da exclusão. Nenhuma disciplina será removida neste protótipo.</p>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="excluir-disciplina-2" popovertargetaction="hide" autofocus>Cancelar</button>
+            <button type="button" class="excluir-disciplina" disabled title="Ação demonstrativa do protótipo">Excluir disciplina</button>
+        </div>
+    </div>
+    <div id="editar-disciplina-3" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-editar-3" aria-describedby="aviso-editar-3">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-editar-3">Editar disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="editar-disciplina-3" popovertargetaction="hide" aria-label="Fechar edição de Bioestatística">×</button>
+        </div>
+        <p id="aviso-editar-3" class="aviso-formulario">Prévia de edição. O preenchimento não altera o card neste protótipo.</p>
+        <div class="campos-cadastro">
+            <label class="campo-largo">Nome da disciplina<input type="text" value="Bioestatística" maxlength="100" autofocus></label>
+            <label class="campo-largo">Professor(a)<input type="text" placeholder="Nome do professor" maxlength="100"></label>
+            <label>Horário<input type="text" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
+            <label>Sala<input type="text" placeholder="Ex.: sala 204" maxlength="40"></label>
+            <label class="campo-largo">Semestre<input type="text" placeholder="Ex.: 2026.2" maxlength="40"></label>
+            <label class="campo-largo">Anotações<textarea rows="3" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+        </div>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="editar-disciplina-3" popovertargetaction="hide">Fechar prévia</button>
+            <button type="button" class="add" disabled title="Ação demonstrativa do protótipo">Salvar alterações</button>
+        </div>
+    </div>
+    <div id="excluir-disciplina-3" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-excluir-3" aria-describedby="aviso-excluir-3">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-excluir-3">Excluir disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="excluir-disciplina-3" popovertargetaction="hide" aria-label="Fechar exclusão de Bioestatística">×</button>
+        </div>
+        <p class="nome-exclusao">Bioestatística</p>
+        <p id="aviso-excluir-3" class="aviso-formulario">Prévia da exclusão. Nenhuma disciplina será removida neste protótipo.</p>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="excluir-disciplina-3" popovertargetaction="hide" autofocus>Cancelar</button>
+            <button type="button" class="excluir-disciplina" disabled title="Ação demonstrativa do protótipo">Excluir disciplina</button>
+        </div>
+    </div>
+    <div id="editar-disciplina-4" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-editar-4" aria-describedby="aviso-editar-4">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-editar-4">Editar disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="editar-disciplina-4" popovertargetaction="hide" aria-label="Fechar edição de Biologia Celular">×</button>
+        </div>
+        <p id="aviso-editar-4" class="aviso-formulario">Prévia de edição. O preenchimento não altera o card neste protótipo.</p>
+        <div class="campos-cadastro">
+            <label class="campo-largo">Nome da disciplina<input type="text" value="Biologia Celular" maxlength="100" autofocus></label>
+            <label class="campo-largo">Professor(a)<input type="text" placeholder="Nome do professor" maxlength="100"></label>
+            <label>Horário<input type="text" placeholder="Ex.: segunda, 19h" maxlength="80"></label>
+            <label>Sala<input type="text" placeholder="Ex.: sala 204" maxlength="40"></label>
+            <label class="campo-largo">Semestre<input type="text" placeholder="Ex.: 2026.2" maxlength="40"></label>
+            <label class="campo-largo">Anotações<textarea rows="3" maxlength="1000" placeholder="Escreva seus lembretes..."></textarea></label>
+        </div>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="editar-disciplina-4" popovertargetaction="hide">Fechar prévia</button>
+            <button type="button" class="add" disabled title="Ação demonstrativa do protótipo">Salvar alterações</button>
+        </div>
+    </div>
+    <div id="excluir-disciplina-4" class="dialogo-disciplina" popover role="dialog" aria-labelledby="titulo-excluir-4" aria-describedby="aviso-excluir-4">
+        <div class="cabecalho-formulario">
+            <h2 id="titulo-excluir-4">Excluir disciplina</h2>
+            <button type="button" class="fechar-disciplina" popovertarget="excluir-disciplina-4" popovertargetaction="hide" aria-label="Fechar exclusão de Biologia Celular">×</button>
+        </div>
+        <p class="nome-exclusao">Biologia Celular</p>
+        <p id="aviso-excluir-4" class="aviso-formulario">Prévia da exclusão. Nenhuma disciplina será removida neste protótipo.</p>
+        <div class="acoes-cadastro">
+            <button type="button" class="cancelar-disciplina" popovertarget="excluir-disciplina-4" popovertargetaction="hide" autofocus>Cancelar</button>
+            <button type="button" class="excluir-disciplina" disabled title="Ação demonstrativa do protótipo">Excluir disciplina</button>
         </div>
     </div>
 </body>
