@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="css/tema.css">
-    <link rel="stylesheet" href="css/atividades.css?v=3">
+    <link rel="stylesheet" href="css/atividades.css?v=4">
     <script src="js/tema.js"></script>
-    <script src="js/atividades.js?v=3" defer></script>
 </head>
 
 <body class="pagina-atividades">
@@ -40,65 +39,110 @@
         <header class="cabecalho">
             <div class="titulo">
                 <h2>Minhas atividades</h2>
-                <input type="search" placeholder="Buscar atividade..." class="pesquisa" aria-label="Buscar atividade">
+                <input type="search" placeholder="Buscar atividade..." class="pesquisa" aria-label="Buscar atividade (somente visual)" disabled title="Busca indisponível no protótipo HTML/CSS">
             </div>
-            <button type="button" class="add" id="nova-atividade" aria-haspopup="dialog">+ Nova atividade</button>
+            <button type="button" class="add" id="nova-atividade" popovertarget="dialogo-atividade">+ Nova atividade</button>
         </header><!-- cabecalho -->
-        <div class="filtros" role="group" aria-label="Filtrar por situação">
-            <button type="button" class="filtro cor1" data-filtro="todos" aria-pressed="true">Todos</button>
-            <button type="button" class="filtro cor2" data-filtro="Pendente" aria-pressed="false">Pendentes</button>
-            <button type="button" class="filtro cor3" data-filtro="Em andamento" aria-pressed="false">Em andamento</button>
-            <button type="button" class="filtro cor4" data-filtro="Concluído" aria-pressed="false">Concluídas</button>
+        <div class="filtros" role="group" aria-label="Filtros demonstrativos, indisponíveis nesta versão">
+            <button type="button" class="filtro cor1" disabled>Todos</button>
+            <button type="button" class="filtro cor2" disabled>Pendentes</button>
+            <button type="button" class="filtro cor3" disabled>Em andamento</button>
+            <button type="button" class="filtro cor4" disabled>Concluídas</button>
         </div>
-        <p class="mensagem-atividades" id="mensagem-atividades" role="status"></p>
-        <button type="button" class="cancelar-atividade" id="desfazer-exclusao" hidden>Desfazer última exclusão</button>
         <div class="proximas-atividades" id="lista-atividades" aria-label="Atividades">
-            <div class="atividade">
-                <div class="bolinha vermelha"></div>
+            <article class="atividade" aria-label="Atividade 1">
+                <div class="bolinha vermelha" aria-hidden="true"></div>
                 <div class="conteudo-atividade">
-                    <h4>Prova de Bioquímica</h4>
-                    <h5>Bioquímica</h5>
+                    <h4 id="titulo-1" contenteditable="plaintext-only" role="textbox" aria-label="Título da atividade 1" tabindex="0" spellcheck="true">Prova de Bioquímica</h4>
+                    <p contenteditable="plaintext-only" role="textbox" aria-label="Disciplina e tipo da atividade 1" tabindex="0">Bioquímica · Prova</p>
                 </div>
-                <div class="data">16/09/2026</div>
-                <div class="situacao cor2">Pendente</div>
-            </div>
-            <div class="atividade">
-                <div class="bolinha amarela"></div>
+                <span class="data" contenteditable="plaintext-only" role="textbox" aria-label="Prazo da atividade 1" tabindex="0">16/09/2026</span>
+                <span class="situacao cor2 status-original">Pendente</span>
+                <span class="situacao cor4 status-concluido">Concluído</span>
+                <div class="rodape-atividade">
+                    <div class="anotacoes-atividade">
+                        <strong>Anotações:</strong>
+                        <p class="descricao-atividade" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-label="Anotações da atividade 1" tabindex="0" data-placeholder="Escreva suas anotações..."></p>
+                    </div>
+                    <div class="acoes-atividade" role="group" aria-label="Ações da atividade 1">
+                        <a class="editar-atividade" href="#titulo-1">Editar</a>
+                        <label class="concluir-atividade"><input type="checkbox" class="conclusao" aria-label="Concluída, atividade 1"> Concluída</label>
+                        <button type="button" class="excluir-atividade" disabled title="Exclusão indisponível no protótipo HTML/CSS">Excluir</button>
+                    </div>
+                </div>
+            </article>
+            <article class="atividade" aria-label="Atividade 2">
+                <div class="bolinha amarela" aria-hidden="true"></div>
                 <div class="conteudo-atividade">
-                    <h4>Relatório de Microbiologia</h4>
-                    <h5>Microbiologia</h5>
+                    <h4 id="titulo-2" contenteditable="plaintext-only" role="textbox" aria-label="Título da atividade 2" tabindex="0" spellcheck="true">Relatório de Microbiologia</h4>
+                    <p contenteditable="plaintext-only" role="textbox" aria-label="Disciplina e tipo da atividade 2" tabindex="0">Microbiologia · Trabalho</p>
                 </div>
-                <div class="data">18/09/2026</div>
-                <div class="situacao cor3">Em andamento</div>
-            </div>
-            <div class="atividade">
-                <div class="bolinha verde"></div>
+                <span class="data" contenteditable="plaintext-only" role="textbox" aria-label="Prazo da atividade 2" tabindex="0">18/09/2026</span>
+                <span class="situacao cor3 status-original">Em andamento</span>
+                <span class="situacao cor4 status-concluido">Concluído</span>
+                <div class="rodape-atividade">
+                    <div class="anotacoes-atividade">
+                        <strong>Anotações:</strong>
+                        <p class="descricao-atividade" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-label="Anotações da atividade 2" tabindex="0" data-placeholder="Escreva suas anotações..."></p>
+                    </div>
+                    <div class="acoes-atividade" role="group" aria-label="Ações da atividade 2">
+                        <a class="editar-atividade" href="#titulo-2">Editar</a>
+                        <label class="concluir-atividade"><input type="checkbox" class="conclusao" aria-label="Concluída, atividade 2"> Concluída</label>
+                        <button type="button" class="excluir-atividade" disabled title="Exclusão indisponível no protótipo HTML/CSS">Excluir</button>
+                    </div>
+                </div>
+            </article>
+            <article class="atividade" aria-label="Atividade 3">
+                <div class="bolinha verde" aria-hidden="true"></div>
                 <div class="conteudo-atividade">
-                    <h4>Lista de Bioestatística</h4>
-                    <h5>Bioestatística</h5>
+                    <h4 id="titulo-3" contenteditable="plaintext-only" role="textbox" aria-label="Título da atividade 3" tabindex="0" spellcheck="true">Lista de Bioestatística</h4>
+                    <p contenteditable="plaintext-only" role="textbox" aria-label="Disciplina e tipo da atividade 3" tabindex="0">Bioestatística · Tarefa</p>
                 </div>
-                <div class="data">20/09/2026</div>
-                <div class="situacao cor4">Concluído</div>
-            </div>
-            <div class="atividade">
-                <div class="bolinha verde"></div>
+                <span class="data" contenteditable="plaintext-only" role="textbox" aria-label="Prazo da atividade 3" tabindex="0">20/09/2026</span>
+                <span class="situacao cor2 status-original">Pendente</span>
+                <span class="situacao cor4 status-concluido">Concluído</span>
+                <div class="rodape-atividade">
+                    <div class="anotacoes-atividade">
+                        <strong>Anotações:</strong>
+                        <p class="descricao-atividade" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-label="Anotações da atividade 3" tabindex="0" data-placeholder="Escreva suas anotações..."></p>
+                    </div>
+                    <div class="acoes-atividade" role="group" aria-label="Ações da atividade 3">
+                        <a class="editar-atividade" href="#titulo-3">Editar</a>
+                        <label class="concluir-atividade"><input type="checkbox" class="conclusao" aria-label="Concluída, atividade 3" checked> Concluída</label>
+                        <button type="button" class="excluir-atividade" disabled title="Exclusão indisponível no protótipo HTML/CSS">Excluir</button>
+                    </div>
+                </div>
+            </article>
+            <article class="atividade" aria-label="Atividade 4">
+                <div class="bolinha verde" aria-hidden="true"></div>
                 <div class="conteudo-atividade">
-                    <h4>Lista de Bioestatística</h4>
-                    <h5>Biologia Celular</h5>
+                    <h4 id="titulo-4" contenteditable="plaintext-only" role="textbox" aria-label="Título da atividade 4" tabindex="0" spellcheck="true">Lista de Bioestatística</h4>
+                    <p contenteditable="plaintext-only" role="textbox" aria-label="Disciplina e tipo da atividade 4" tabindex="0">Biologia Celular · Tarefa</p>
                 </div>
-                <div class="data">25/09/2026</div>
-                <div class="situacao cor4">Concluído</div>
-            </div>
-        </div><!-- Próximas atividades -->
-        <p id="lista-vazia" hidden>Nenhuma atividade encontrada para esta busca.</p>
+                <span class="data" contenteditable="plaintext-only" role="textbox" aria-label="Prazo da atividade 4" tabindex="0">25/09/2026</span>
+                <span class="situacao cor2 status-original">Pendente</span>
+                <span class="situacao cor4 status-concluido">Concluído</span>
+                <div class="rodape-atividade">
+                    <div class="anotacoes-atividade">
+                        <strong>Anotações:</strong>
+                        <p class="descricao-atividade" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-label="Anotações da atividade 4" tabindex="0" data-placeholder="Escreva suas anotações..."></p>
+                    </div>
+                    <div class="acoes-atividade" role="group" aria-label="Ações da atividade 4">
+                        <a class="editar-atividade" href="#titulo-4">Editar</a>
+                        <label class="concluir-atividade"><input type="checkbox" class="conclusao" aria-label="Concluída, atividade 4" checked> Concluída</label>
+                        <button type="button" class="excluir-atividade" disabled title="Exclusão indisponível no protótipo HTML/CSS">Excluir</button>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main><!-- Conteúdo principal -->
-    <dialog id="dialogo-atividade" aria-labelledby="titulo-formulario" aria-describedby="ajuda-formulario">
+    <div popover id="dialogo-atividade" role="dialog" aria-labelledby="titulo-formulario" aria-describedby="ajuda-formulario">
         <div class="formulario-cabecalho">
             <h2 id="titulo-formulario">Nova atividade</h2>
-            <button type="button" class="fechar-formulario" data-fechar-formulario aria-label="Fechar formulário">&times;</button>
+            <button type="button" class="fechar-formulario" popovertarget="dialogo-atividade" popovertargetaction="hide" aria-label="Fechar formulário">&times;</button>
         </div>
-        <p id="ajuda-formulario">Organize sua próxima entrega. Os campos com * são obrigatórios.</p>
-        <form id="formulario-atividade">
+        <p id="ajuda-formulario">Prévia do formulário. Você pode preencher os campos, mas esta versão não cria nem salva atividades.</p>
+        <div id="formulario-atividade">
             <div class="campo campo-inteiro">
                 <label for="atividade-titulo">Título *</label>
                 <input id="atividade-titulo" name="titulo" required maxlength="120" placeholder="Ex.: Relatório de Microbiologia" autofocus>
@@ -137,13 +181,12 @@
                 <label for="atividade-descricao">Anotações (opcional)</label>
                 <textarea id="atividade-descricao" name="descricao" rows="3" maxlength="1000" placeholder="Anote instruções ou detalhes da atividade"></textarea>
             </div>
-            <p class="campo-inteiro erro-formulario" id="erro-formulario" role="alert"></p>
             <div class="formulario-acoes campo-inteiro">
-                <button type="button" class="cancelar-atividade" data-fechar-formulario>Cancelar</button>
-                <button type="submit" class="add">Salvar atividade</button>
+                <button type="button" class="cancelar-atividade" popovertarget="dialogo-atividade" popovertargetaction="hide">Cancelar</button>
+                <button type="button" class="add" disabled title="Salvar exige JavaScript ou um servidor">Salvar atividade</button>
             </div>
-        </form>
-    </dialog>
+        </div>
+    </div>
 </body>
 
 </html>

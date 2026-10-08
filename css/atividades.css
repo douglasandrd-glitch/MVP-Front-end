@@ -44,7 +44,7 @@
     box-shadow: 0 24px 80px #0003;
 }
 #dialogo-atividade::backdrop { background: #11112299; }
-body:has(#dialogo-atividade[open]) { overflow: hidden; }
+body:has(#dialogo-atividade:popover-open) { overflow: hidden; }
 .formulario-cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .formulario-cabecalho h2 { font-size: 24px; }
 .fechar-formulario { border: 0; border-radius: 8px; width: 36px; height: 36px; background: var(--fundo); color: var(--texto-primario); font-size: 26px; }
@@ -85,3 +85,28 @@ body:has(#dialogo-atividade[open]) { overflow: hidden; }
     #formulario-atividade { grid-template-columns: 1fr; }
     .formulario-acoes { flex-wrap: wrap; }
 }
+
+/* Interações nativas: o checkbox controla apenas a apresentação do card.
+   Nenhum dado de atividade é lido, alterado ou salvo no localStorage. */
+.pagina-atividades [contenteditable] { border-radius: 4px; min-height: 1.5em; }
+.pagina-atividades [contenteditable]:hover { background: var(--destaque); }
+.pagina-atividades :is(a, [contenteditable]):focus-visible,
+.concluir-atividade:focus-within { outline: 2px solid var(--roxo); outline-offset: 3px; }
+.pagina-atividades .conteudo-atividade p { color: var(--texto-secundario); font-size: 14px; }
+.descricao-atividade:empty::before { content: attr(data-placeholder); pointer-events: none; }
+.editar-atividade { text-decoration: none; }
+.concluir-atividade { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.conclusao { width: 16px; height: 16px; accent-color: var(--roxo); }
+.pagina-atividades .status-concluido { display: none; }
+.atividade:has(.conclusao:checked) .status-original { display: none; }
+.pagina-atividades .atividade:has(.conclusao:checked) .status-concluido { display: grid; }
+.atividade:has(.conclusao:checked) h4 { text-decoration: line-through; }
+.pagina-atividades button:disabled { cursor: not-allowed; opacity: .65; }
+.pagina-atividades .filtro { font-size: 14px; width: auto; min-width: 100px; padding: 0 12px; }
+.pagina-atividades .mensagem-atividades { line-height: 1.6; }
+.pagina-atividades .cor2 { color: #B4233D; }
+.pagina-atividades .cor3 { color: #835200; }
+.pagina-atividades .cor4 { color: #287044; }
+:root[data-tema="escuro"] .pagina-atividades .cor2 { color: #FF9AAB; }
+:root[data-tema="escuro"] .pagina-atividades .cor3 { color: #FFD18A; }
+:root[data-tema="escuro"] .pagina-atividades .cor4 { color: #8DDDA8; }
