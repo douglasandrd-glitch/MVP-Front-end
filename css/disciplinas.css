@@ -64,10 +64,24 @@
 .dados-disciplina dt, .anotacoes-disciplina h4 { font-size: 14px; font-weight: 600; color: var(--texto-primario); }
 .dados-disciplina dd { margin: 6px 0 0; color: var(--texto-secundario); font-size: 14px; overflow-wrap: anywhere; }
 .anotacoes-disciplina p { margin-top: 6px; color: var(--texto-secundario); font-size: 14px; line-height: 1.5; }
-.acoes-disciplina { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--borda); padding-top: 16px; }
+.cabecalho-disciplina { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.cabecalho-disciplina h3 { min-width: 0; flex: 1; }
+.menu-disciplina { position: relative; flex-shrink: 0; }
+.abrir-acoes { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--borda); border-radius: 8px; background: var(--superficie); color: var(--texto-primario); cursor: pointer; }
+.abrir-acoes span { font-size: 26px; line-height: 1; }
+.abrir-acoes:hover, .abrir-acoes[aria-expanded="true"] { background: var(--destaque); }
+.acoes-disciplina { position: absolute; top: calc(100% + 6px); right: 0; z-index: 5; display: grid; min-width: 148px; padding: 6px; gap: 4px; border: 1px solid var(--borda); border-radius: 10px; background: var(--superficie); box-shadow: 0 8px 24px #0003; }
+.acoes-disciplina[hidden] { display: none; }
+.acoes-disciplina button { text-align: left; border: 0; width: 100%; }
 .editar-disciplina, .excluir-disciplina { border: 1px solid var(--borda); border-radius: 8px; padding: 10px 14px; background: var(--superficie); font-size: 14px; cursor: pointer; }
 .editar-disciplina { color: var(--roxo); }
 .excluir-disciplina { color: #B4233D; }
 :root[data-tema="escuro"] .excluir-disciplina { color: #FF9AAB; }
 .editar-disciplina:hover, .excluir-disciplina:not(:disabled):hover { background: var(--destaque); }
 .nome-exclusao { margin-top: 24px; font-weight: 600; overflow-wrap: anywhere; }
+
+#feedback-disciplinas { margin-top: 16px; color: var(--texto-primario); font-size: 14px; }
+#feedback-disciplinas:empty { display: none; }
+#disciplinas-vazias { margin-top: 24px; color: var(--texto-secundario); }
+.anotacoes-disciplina p { white-space: pre-wrap; overflow-wrap: anywhere; }
+body:has(.dialogo-disciplina[open]) { overflow: hidden; }
